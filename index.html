@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container my-4 mx-auto rounded-lg">
+        <div class="row justify-center">
+            <div class="col-span-4 bg-gray-800 text-light">
+                <div class="p-2">
+                    <h3 class="text-center font-bold text-4xl text-white">
+                        Password Generator
+                    </h3>
+                </div>
+                <div class="pt-10 pb-3 text-center">
+                    <label for="inputLength"
+                        class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none text-center">Length</label>
+                    <input type="number" id="inputLength" class="text-black text-base font-bold text-center px-5"
+                        min="1" max="50" value="12" />
+                </div>
+                <div class="form-check py-3 px-16">
+                    <input type="checkbox" id="checkbox1" class="form-check-input" />
+                    <label class="form-check-label text-white" for="checkbox1">Incluide numbers</label>
+                </div>
+                <div class="form-check py-3 px-16">
+                    <input type="checkbox" id="checkbox2" class="form-check-input" />
+                    <label class="form-check-label text-white" for="checkbox2">Incluide symbols</label>
+                </div>
+                <div class="d-grid gap-2 my-3 text-center">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        id="btnGenerate">
+                        Generate Password
+                    </button>
+                </div>
+                <hr />
+                <div class="py-3 text-center">
+                    <span id="generatedPassword" class="text-xl inline-block py-1 px-4 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-500 text-white rounded-full "></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
